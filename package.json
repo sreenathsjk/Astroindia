@@ -1,4 +1,4 @@
-{
+ {
   "name": "astroai-india",
   "version": "1.0.0",
   "private": true,
@@ -7,6 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "next": "14.2.5",
@@ -17,7 +20,7 @@
     "firebase-admin": "^12.2.0",
     "redis": "^4.6.14",
     "razorpay": "^2.9.2",
-    "sweph": "^2.10.3",
+    "astronomia": "^4.1.1",
     "axios": "^1.7.2",
     "date-fns": "^3.6.0",
     "zod": "^3.23.8",
