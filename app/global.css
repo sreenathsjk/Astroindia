@@ -1,0 +1,83 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cinzel:     'Cinzel Decorative', serif;
+  --font-crimson:    'Crimson Pro', Georgia, serif;
+  --font-devanagari: 'Noto Sans Devanagari', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #080610;
+  color: #EDE8D0;
+  font-family: var(--font-crimson);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #8B6914; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+
+/* Selection */
+::selection { background: rgba(212,175,55,0.25); color: #FFF8E7; }
+
+/* Gradient text utility */
+.gradient-gold {
+  background: linear-gradient(135deg, #D4AF37, #F5D572, #D4AF37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass card */
+.glass {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,175,55,0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Cosmic glow */
+.glow-gold {
+  box-shadow: 0 0 30px rgba(212,175,55,0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* Page transitions */
+.page-enter {
+  animation: pageEnter 0.4s ease forwards;
+}
+
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Typing dots */
+.typing-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #8B6914;
+  animation: typingBounce 1.2s infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingBounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30%           { transform: translateY(-6px); opacity: 1; }
+}
+
+/* Mobile bottom nav spacing */
+@media (max-width: 768px) {
+  main { padding-bottom: 72px; }
+}
+
